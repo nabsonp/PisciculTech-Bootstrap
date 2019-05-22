@@ -4,8 +4,8 @@ var situacao;
 
 function pesquisar(){
     busca = document.getElementById("pesquisar");
-    
-    if (!barraAberta) { 
+
+    if (!barraAberta) {
         busca.style.width = "200px";
         busca.focus();
         barraAberta = true;
@@ -27,7 +27,7 @@ function pesquisar(){
 
 function sair(){
     if (confirm("Sair da conta?")){
-        window.open("Sair", "_self");
+        window.open("../diversos/login.html", "_self");
     }
 }
 

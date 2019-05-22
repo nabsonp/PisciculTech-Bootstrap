@@ -6,7 +6,7 @@
         <title>PisciculTech</title>
         <link href = "../css/pagina-inicial.css" rel = "StyleSheet" />
         <link href = "../css/menu-rodape.css" rel = "StyleSheet" />
-        <script src="js/menu.js"></script>
+        <script src="../js/menu.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -31,16 +31,15 @@
                     <a href = "../relatorios/rel-financeiros.html">Relatórios</a>
                 </li>
             </ul>
-            <span id = "conta">
-                <img title = "Nabson" src = "../funcionarios/nabson-paiva.jpg" id = "user"/>
-                <img id="seta" src = "../icones/seta-para-baixo.png"/><br/>
-                <label id = "admin">Nabson</label>
-                <ul id = "opcoes">
-                    <li id="atual" onclick="abrirContaFunc()">Minha conta</li><br/>
-                    <li onclick="abrirContaEmp()">Empresa</li><br/>
-                    <li onclick="sair()">Sair</li>
-                </ul>
-            </span>
+            <div style = "position: absolute;  right: 1%; top: 25px; z-index: 2;" class="btn-group">
+              <button  type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Nabson Paiva
+              </button>
+              <div class="dropdown-menu">
+                <a style="color: black; " class="dropdown-item" href="#">Minha Conta</a>
+                <a style="color: black; " class="dropdown-item" href="#">Empresa</a>
+                <a style="color: black; " class="dropdown-item" href="#" onclick="sair()">Sair</a>
+            </div>
         </nav>
 
 
