@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name = "Content-Type" content = "text/html"; charset = "UTF-8" />
+        <link rel="icon" href="../icones/icon-peixe.png" type="image/png-icon" />
+        <title>Relatórios</title>
+        <link href = "rel-financeiros.css" rel = "StyleSheet" />
+        <script src="rel-financeiros.js"></script>
+        <link href = "../auxiliares/menu-rodape.css" rel = "StyleSheet" />
+        <script src="../auxiliares/menu.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js?hcode=be5162d915534272a57d0bb781d27f2b"></script>
+  <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css?hcode=be5162d915534272a57d0bb781d27f2b" type="text/css" rel="stylesheet">
+  <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css?hcode=be5162d915534272a57d0bb781d27f2b" type="text/css" rel="stylesheet">
+  <style type="text/css">
+html, body, #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+  width: 80%;
+  height: 80%;
+  margin: 0;
+  padding-left: 20%;
+  display: block;
+  align-items: center;
+}
+</style>
+    </head>
+    <body>
+      <nav id = "menu">
+          <ul>
+              <img src = "../icones/logotipo.png" id = "logoCabecalho"/>
+              <li>
+                  <a href = "../diversos/pagina-inicial.html"><img src = "../icones/home.png" width = 25/></a>
+              </li>
+              <li>
+                  <a href = "../tanques/tanques.html">Tanques</a>
+              </li>
+              <li>
+                  <a href = "../especie/especies.html">Espécies</a>
+              </li>
+              <li>
+                  <a href = "../estoque/estoque.html">Estoque</a>
+              </li>
+              <li class = "current">
+                  <a href = "../relatorios/rel-financeiros.html">Relatórios</a>
+              </li>
+          </ul>
+          <span id = "conta">
+              <img title = "<%=nome%>" src = "../funcionarios/nabson-paiva.jpg" id = "user"/>
+              <img id="seta" src = "../icones/seta-para-baixo.png"/><br/>
+              <label id = "admin">Nabson</label>
+              <ul id = "opcoes">
+                  <li id="atual" onclick="abrirContaFunc()">Minha conta</li><br/>
+                  <li onclick="abrirContaEmp()">Empresa</li><br/>
+                  <li onclick="sair()">Sair</li>
+              </ul>
+          </span>
+      </nav>
+      <div id="container"></div>
+        <script>
+          anychart.onDocumentReady(function () {
+            // create line chart
+            var chart = anychart.line();
+
+            // set chart padding
+            chart.padding([10, 20, 5, 20]);
+
+            // turn on chart animation
+            chart.animation(true);
+
+            // turn on the crosshair
+            chart.crosshair(true);
+
+            // set chart title text settings
+            chart.title('Vendas durante a semana');
+
+            // set y axis title
+            chart.yAxis().title('Vendas (kG)');
+
+            // create logarithmic scale
+            var logScale = anychart.scales.log();
+            logScale.minimum(1)
+                    .maximum(45000);
+
+            // set scale for the chart, this scale will be used in all scale dependent entries such axes, grids, etc
+            chart.yScale(logScale);
+
+            // create data set on our data,also we can pud data directly to series
+            var dataSet = anychart.data.set([
+                ['Segunda', '1120', '4732', '15176'],
+                ['Terça', '720', '3689', '18910'],
+                ['Quarta', '404', '3904', '19004'],
+                ['Quinta', '190', '754', '22233'],
+                ['Sexta', '15', '187 ', '922'],
+                ['Sábado', '10', '45', '534'],
+                ['Domingo', '7', '61', '343']
+            ]);
+
+            // map data for the first series,take value from first column of data set
+            var seriesData_1 = dataSet.mapAs({'x': 0, 'value': 1});
+
+            // map data for the second series,take value from second column of data set
+            var seriesData_2 = dataSet.mapAs({'x': 0, 'value': 2});
+
+            // map data for the third series, take x from the zero column and value from the third column of data set
+            var seriesData_3 = dataSet.mapAs({'x': 0, 'value': 3});
+
+            // temp variable to store series instance
+            var series;
+
+            // setup first series
+            series = chart.line(seriesData_1);
+            series.name('Pirarucu');
+            // enable series data labels
+            series.labels()
+                    .enabled(true)
+                    .anchor('left-bottom')
+                    .padding(5);
+            // enable series markers
+            series.markers(true);
+
+            // setup second series
+            series = chart.line(seriesData_2);
+            series.name('Tucunaré');
+            // enable series data labels
+            series.labels()
+                    .enabled(true)
+                    .anchor('left-bottom')
+                    .padding(5);
+            // enable series markers
+            series.markers(true);
+
+            // setup third series
+            series = chart.line(seriesData_3);
+            series.name('Tambaqui');
+            // enable series data labels
+            series.labels()
+                    .enabled(true)
+                    .anchor('left-bottom')
+                    .padding(5);
+            // enable series markers
+            series.markers(true);
+
+            // turn the legend on
+            chart.legend()
+                    .enabled(true)
+                    .fontSize(13)
+                    .padding([0, 0, 20, 0]);
+
+            // set container for the chart and define padding
+            chart.container('container');
+            // initiate chart drawing
+            chart.draw();
+          });
+        </script>
+
+        <script>
+        anychart.onDocumentReady(function () {
+            // create area chart
+            var chart = anychart.area();
+
+            // turn on chart animation
+            chart.animation(true);
+
+            // set chart title text settings
+            chart.title()
+                    .enabled(true)
+                    .useHtml(true)
+                    .text('Métricas de Website');
+
+            // axis title
+            chart.yAxis().title('Número de Visitantes');
+
+            // create a logarithmic scale
+            var logScale = anychart.scales.log();
+            logScale.minimum(1) // set scale minimum value
+                    .maximumGap(0.2); // increase scale maximum gap
+            logScale.ticks().count(6); // set fixed major ticks count
+            logScale.minorTicks().mode('logarithmic'); // set minor ticks to use logarithmic mode
+
+            // set scale for the chart
+            // it force to use passed scale in all scale dependent entries such axes, grids, crosshairs etc
+            chart.yScale(logScale);
+
+            // create area series on passed data
+            var series = chart.area([
+                ['Jan', 112],
+                ['Fev', 163],
+                ['Mar', 229],
+                ['Abr', 990],
+                ['Mai', 4104],
+                ['Jun', 3250],
+                ['Jul', 5720],
+                ['Ago', 43],
+                ['Set', 61],
+                ['Out', 34],
+                ['Nov', 45],
+                ['Dez', 122]
+            ]);
+
+            // set series data labels settings
+            series.labels()
+                    .enabled(true)
+                    .fontColor('#212121')
+                    .position('center-top')
+                    .anchor('center-bottom');
+
+            // turn on series markers
+            series.markers(true);
+
+            // set series name
+            series.name('Número de Visitantes');
+
+            // set up tooltips and interactivity settings
+            series.tooltip()
+                    .position('center-top')
+                    .positionMode('point')
+                    .anchor('left-top')
+                    .offsetX(5)
+                    .offsetY(5);
+
+            chart.interactivity().hoverMode('by-x');
+
+            // set container for the chart
+            chart.container('container');
+            // initiate chart drawing
+            chart.draw();
+        });
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

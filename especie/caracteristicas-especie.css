@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Andada');
+
+/*MENU LATERAL ESPÉCIE*/
+button#buttonImgLateral{
+    background-image: url("../icones/imagem-placeholder.png");
+    height: 140px;
+    width: 90%;
+    background-size: 100% 100%;
+    margin-top: 30px;
+    margin-left: 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+button#buttonImgLateral:hover{
+    background: url('../icones/imagem-placeholder-edit.png');
+    background-size: 100% 100%;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px grey;
+}
+
+div.menuLateral{
+    height: 300px !important;
+}
+
+/*==================================*/
+
+div#corpo{
+    position: relative;
+    width: 80%;
+    top: -360px;
+    left: 10%;
+    transition: all 0.5s;
+}
+
+#check:checked ~ div#corpo{
+    transform: translateX(10%);
+}
+
+h2{
+    font-family: 'Andada', serif;
+    color: #606060; 
+    font-weight: inherit;
+    position: relative;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-left: -80px;
+    width: 160px;
+    left: 50%;
+}
+
+hr{
+    position: relative;
+    width: 100%;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+table#caracteristica{
+    border-width: 1px;
+    border-spacing: 0px 0px;
+    position: relative;
+    top:5px;
+    left: 50%;
+    margin-left: -302.5px;
+    width: 700px;
+}
+
+table#caracteristica td:not(.dados){
+    text-align: center;
+    border-style: solid;
+    border-width: thin;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+table#caracteristica th:not(.dadoss){
+    border-style: solid;
+    border-width: thin;
+    font-weight: normal;
+    padding-left: 170px;
+    padding-right: 170px;
+    background-color: #91e4fb; 
+}
+
+table#caracteristica td.btts{
+    text-align: center;
+    border-style: inherit !important;
+    border-width: 0px !important;
+    visibility: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+table#caracteristica tr:hover td.btts{
+    visibility: visible;
+}
+
+table#caracteristica td.btts img{
+    width: 17.5px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+    left: -7.5px;
+}
+
+td.btts button{
+    border-style: inherit;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 25px;
+    position: relative;
+    left: -10px;
+}
+
+td.btts button:hover{
+    background-color: #1a7c96;
+    cursor: pointer;
+}
+
+.dados{
+    text-align: center;
+    border-style: solid;
+    border-width: thin;
+    padding-left: 40px;
+    padding-right: 40px; 
+}
+
+.dadoss{
+    text-align: center;
+    border-style: solid;
+    border-width: thin;
+    font-weight: normal;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #91e4fb; 
+}
+
+body{
+    height: 0;
+}

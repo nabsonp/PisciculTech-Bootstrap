@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name = "Content-Type" content = "text/html"; charset = "UTF-8" />
+        <link rel="icon" href="icones/icon-peixe.png" type="image/png-icon" />
+        <title>PisciculTech</title>
+        <link href = "../css/pagina-inicial.css" rel = "StyleSheet" />
+        <link href = "../css/menu-rodape.css" rel = "StyleSheet" />
+        <script src="js/menu.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <nav id = "menu">
+            <ul>
+                <img src = "../icones/logotipo.png" id = "logoCabecalho"/>
+                <li class = "current">
+                    <a href = "pagina-inicial.html"><img src = "../icones/home.png" width = 25/></a>
+                </li>
+                <li>
+                    <a href = "../tanques/tanques.html">Tanques</a>
+                </li>
+                <li>
+                    <a href = "../especie/especies.html">Espécies</a>
+                </li>
+                <li>
+                    <a href = "../estoque/estoque.html">Estoque</a>
+                </li>
+                <li>
+                    <a href = "../relatorios/rel-financeiros.html">Relatórios</a>
+                </li>
+            </ul>
+            <span id = "conta">
+                <img title = "Nabson" src = "../funcionarios/nabson-paiva.jpg" id = "user"/>
+                <img id="seta" src = "../icones/seta-para-baixo.png"/><br/>
+                <label id = "admin">Nabson</label>
+                <ul id = "opcoes">
+                    <li id="atual" onclick="abrirContaFunc()">Minha conta</li><br/>
+                    <li onclick="abrirContaEmp()">Empresa</li><br/>
+                    <li onclick="sair()">Sair</li>
+                </ul>
+            </span>
+        </nav>
+
+
+    <div class="bd-example">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../icones/peixes.jpg" class="d-block w-100" alt="..." height="596em">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Diversas espécies disponíveis</h5>
+              <p>Um banco com todas as espécies cultivavéis em água doce e suas especificações para manter seus peixes saudáveis.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../icones/tanques.jpg" class="d-block w-100" alt="..."  height="596em">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Monitoramento de Tanques</h5>
+              <p>Acesse o status de seus tanques remotamente de onde estiver.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../icones/relatorios.jpg" class="d-block w-100" alt="..."  height="596em">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Acompanhamento Financeiro</h5>
+              <p>Administre seu negócio com base em gráficos e relatórios gerados automaticamente.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

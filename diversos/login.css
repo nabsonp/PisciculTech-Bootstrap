@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Andada');
+
+* {
+    font-family: 'Andada', serif;
+}
+
+td#msgErro{
+    margin-left: 10px;
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+form {
+    display: block;
+    margin-top: em;
+    background-color: #fff;
+    border: 1px solid #d8dee2;
+    border-radius: 5px;
+}
+
+p {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    display: block;
+    margin-top: em;
+    background-color: #fff;
+    border: 1px solid #d8dee2;
+    border-radius: 5px;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+body {
+    display: -ms-flexbox;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+        background-color: #f5f5f5 !important;
+}

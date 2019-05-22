@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name = "Content-Type" content = "text/html"; charset = "UTF-8" />
+        <link rel="icon" href="../icones/icon-peixe.png" type="image/png-icon" />
+        <title>Estoque</title>
+        <link href = "estoque.css" rel = "StyleSheet" />
+        <script src="estoque.js"></script>
+        <link href = "../auxiliares/menu-rodape.css" rel = "StyleSheet" />
+        <link href = "../auxiliares/menu-lateral.css" rel = "StyleSheet" />
+        <script src="../auxiliares/menu.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body>
+      <nav id = "menu">
+          <ul>
+              <img src = "../icones/logotipo.png" id = "logoCabecalho"/>
+              <li>
+                  <a href = "../diversos/pagina-inicial.html"><img src = "../icones/home.png" width = 25/></a>
+              </li>
+              <li>
+                  <a href = "../tanques/tanques.html">Tanques</a>
+              </li>
+              <li>
+                  <a href = "../especie/especies.html">Espécies</a>
+              </li>
+              <li class = "current">
+                  <a href = "../estoque/estoque.html">Estoque</a>
+              </li>
+              <li>
+                  <a href = "../relatorios/rel-financeiros.html">Relatórios</a>
+              </li>
+          </ul>
+          <span id = "conta">
+              <img title = "<%=nome%>" src = "../funcionarios/nabson-paiva.jpg" id = "user"/>
+              <img id="seta" src = "../icones/seta-para-baixo.png"/><br/>
+              <label id = "admin">Nabson</label>
+              <ul id = "opcoes">
+                  <li id="atual" onclick="abrirContaFunc()">Minha conta</li><br/>
+                  <li onclick="abrirContaEmp()">Empresa</li><br/>
+                  <li onclick="sair()">Sair</li>
+              </ul>
+          </span>
+      </nav>
+      <div style="padding-top:40px;"class="container">
+        <table class="table">
+          <h2 id = "peixes">Peixes</h2>
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Espécie</th>
+              <th scope="col">Quantidade</th>
+              <th scope="col">Tanque</th>
+              <th scope="col">Peso</th>
+              <th scope="col">Altura</th>
+              <th scope="col">Largura</th>
+              <th scope="col">Biomassa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <h2 id = "peixes">Insumos</h2>
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Espécies</th>
+              <th scope="col">Forncedor</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Data de Compra</th>
+              <th scope="col">Peso </th>
+              <th scope="col">Total </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <h2 style="text-align:center">Equipamentos, Máquinas e Combustíveis</h2>
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Descrição</th>
+              <th scope="col">Forncedor</th>
+              <th scope="col">Marca</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Quantidade </th>
+              <th scope="col">Total </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

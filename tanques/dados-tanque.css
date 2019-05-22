@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Andada');
+
+div#navega{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    margin-bottom: 5px;
+}
+
+div#navega a{
+    text-decoration: none;
+    color: #000;
+}
+
+span#atual{
+    color: #00a4d3 !important;
+}
+
+div#navega a:hover{
+    color: #00a4d3;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*MENU LATERAL*/
+img#iconeT{
+    margin-left: 5px;
+    transition: 0.5s;
+    background-color: #f0eded;
+    padding: 3px;
+    border-radius: 5px;
+    width: 25px;
+    z-index: 1;
+}
+
+#check:checked ~ .menuLateralT{
+    transform: translateX(255px);
+}
+
+#check:checked ~ #corpo{
+    transform: translateX(7.5%);
+}
+
+div.menuLateralT {
+    background-color: #f0eded;
+    width: 225px;
+    height: 200px;
+    border-radius: 5px;
+    position: relative;
+    top: -50px;
+    left: -255px;
+    transition: all 0.5s;
+}
+
+div.menuLateralT ul#botoes{
+    list-style: none;
+    position: relative;
+    top: -25px;
+}
+
+/*CORPO*/
+div#topo{
+    position: relative;
+    left: 100%;
+    margin-left: -122.5px;
+    width: 122.5px;
+    background-color: #f7f6f6;
+    padding: 8px;
+}
+
+div#topo a{
+    font-family: 'Andada', serif;
+    text-decoration: none;
+    color: #000;
+}
+
+div#topo img{
+    width: 16px;
+    position: relative;
+    top: 3px;
+    left: 5px;
+}
+
+div#corpo{
+    position: relative;
+    top: -600px;
+    left: 10%;
+    width: 80%;
+    transition: all 0.5s;
+}
+
+h1{
+    font-family: 'Andada', serif;
+    font-size: 30px;
+    width: 205px;
+    color: #1a7c96;
+    position: relative;
+    left: 50%;
+    margin-left: -102.5px;
+}
+
+h2{
+    font-family: 'Andada', serif;
+    color: #606060; 
+    font-weight: inherit;
+    position: relative;
+}
+
+h2#agua{
+    left: 48%;
+    width: 4%;
+}
+
+h2#peixes{
+    left: 47.5%;
+    width: 5%;
+    min-width: 80px;
+}
+
+h2#arracoamento{
+    left: 44.75%;
+    width: 10.5%;
+    min-width: 144px;
+}
+
+h2#dadosTanque{
+    left: 43.25%;
+    width: 13%;
+    min-width: 192px;
+}
+
+hr{
+    width: 100%;
+    position: relative;
+    top: -15px;
+}
+
+table.dados{
+    border-width: 1px;
+    border-spacing: 0px;
+    position: relative;
+    top: -15px;
+}
+
+table#agua{
+    left: 50%;
+    margin-left: -445px /*(width/2) - padding-right - padding-left - btts.width*/;
+    width: 1000px;
+}
+
+table#peixe{
+    left: 50%;
+    margin-left: -495px;
+    width: 1100px;
+}
+
+table#arracoamento{
+    left: 50%;
+    margin-left: -395px;
+    width: 950px;
+}
+
+table#arracoamento td{
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+table#dadosDoTanque{
+    left: 50%;
+    margin-left: -265px;
+    width:700px;
+    text-align: left !important;
+}
+
+table#dadosDoTanque td{
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+}
+
+table.dados td{
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
+table.dados td.btts{
+    text-align: center;
+    border-style: inherit !important;
+    border-width: 0px !important;
+    visibility: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+table.dados tr:hover td.btts{
+    visibility: visible;
+}
+
+table.dados td.btts img{
+    width: 17.5px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+    left: -7.5px;
+}
+
+table.dados tr.titulo{
+    background-color: #91e4fb; 
+}
+
+td.btts button{
+    border-style: inherit;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 25px;
+    position: relative;
+    left: -10px;
+}
+
+td.btts button:hover{
+    background-color: #1a7c96;
+    cursor: pointer;
+}
+
+body{
+    max-height: 1500px;
+}
+
+footer#rodape{
+    top: 200% !important;
+}

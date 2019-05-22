@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name = "Content-Type" content = "text/html"; charset = "UTF-8" />
+        <link rel="icon" href="../icones/icon-peixe.png" type="image/png-icon" />
+        <title>Cadastrar Tanque</title>
+        <link href = "cadastrar-tanque.css" rel = "StyleSheet" />
+        <link href = "../auxiliares/menu-rodape.css" rel = "StyleSheet" />
+        <link href = "../auxiliares/botoes-formulario.css" rel = "StyleSheet" />
+        <script src="cadastrar-tanque.js"></script>
+        <script src="../auxiliares/menu.js"></script>
+    </head>
+    <body onload="foco()">
+        <nav id = "menu">
+            <ul>
+                <img src = "../icones/logotipo.png" id = "logoCabecalho"/>
+                <li>
+                    <a href = "../diversos/pagina-inicial.html"><img src = "../icones/home.png" width = 25/></a>
+                </li>
+                <li>
+                    <a href = "../financeiro/financeiro-insumos.html">Financeiro</a>
+                </li>
+                <li class = "current">
+                    <a href = "tanques.html">Tanques</a>
+                </li>
+                <li>
+                    <a href = "../especie/especies.html">Espécies</a>
+                </li>
+                <li>
+                    <a href = "../estoque/estoque.html">Estoque</a>
+                </li>
+                <li>
+                    <a href = "../relatorios/rel-financeiros.html">Relatórios</a>
+                </li>
+                <li>
+                    <span>
+                        <button><input type = "text" id = "pesquisar" placeholder = "Pesquisar"/><img src = "../icones/lupa-branca.png" onclick = "pesquisar()"/></button>
+                    </span>
+                </li>
+            </ul>
+            <span id = "conta">
+                    <a href = "../diversos/cadastro-editar"><img src = "../icones/usuario.png" id = "user"/></a>
+                    <div><label id = "admin"><a href = "#">Admin</a></label></div>
+                </span>
+            <button id = "sair" onclick = "sair()">Sair</button>
+        </nav>
+        <div id = "navega"><a href = "../diversos/pagina-inicial.html">Página Inicial</a> &raquo; <a href = "tanques.html">Tanques</a> &raquo; <span id = "atual">Cadastrar Tanque</span></div>
+        <div>
+            <h1>Cadastro</h1>
+            <hr width = 900px/>
+        </div>
+        <form name = "cadastroTanque">
+            <table id = "formCad" align = center>
+                <tr> <td><labe>ID do Tanque:</labe></td> <td colspan="3"><input type = "text"  size = 55 placeholder = "ID" name = "id"/></td></tr>
+                <tr> <td><label>Piscicultura:</label></td> <td colspan="3"><input type= "radio" name = "piscicultura" /><label>Alevinos</label><input type= "radio" name = "piscicultura" class = "margemEsquerda15" /><label>Juvenil</label><input type= "radio" name = "piscicultura" class = "margemEsquerda15" /><label>Engorda</label></td></tr>
+                <tr> <td><label>Tipo:</label></td> <td colspan="3"><input type = "text" placeholder = "Escavado, Alvenaria, etc." size = 55 name = "tipo" /></td></tr>
+                <tr> <td><label>Revestimento:</label></td> <td colspan="3"><input type = "text" placeholder = "PVC, nenhum, etc." size = 55 name = "revest" /></td></tr>
+                <tr> <td><label>Capacidade (L):</label></td> <td colspan="3"><input type = "text" size = 55 name = "cap"  id = "cap" onkeyup="verificaNumeros('cap')" /></td></tr>
+                <tr> <td><label>Renovação (L/H):</label></td> <td><input type = "text" size = 16 name = "renov" id = "renov" onkeyup="verificaNumeros('renov')"/></td> <td align = right><label>Vazão (L/H):</label></td> <td align = left><input type = "text" size = 16 name = "vazao"  id = "vazao" onkeyup="verificaNumeros('vazao')" /></td> </tr>
+                <tr> <td><label>Comprimento (M):</label></td> <td colspan="3"><input type = "text" size = 16 name = "comp"  id = "comp" onkeyup="verificaNumeros('comp')"/></td></tr>
+                <tr> <td><label>Largura (M):</label></td> <td colspan="3"><input type = "text" size = 16 name = "larg"  id = "larg" onkeyup="verificaNumeros('larg')" /></td></tr>
+                <tr> <td><label>Altura (M):</label></td> <td colspan="3"><input type = "text" size = 16 name = "alt"  id = "alt" onkeyup="verificaNumeros('alt')" /></td></tr>
+                <tr> <td colspan="4" align = "right"><button class = "botoes" onclick = "salvar()"><img src = "../icones/checked.png" /><span>Salvar</span></button><button class = "botoes" onclick="cancelar()"><img src = "../icones/cancelar.png"/><span>Cancelar</span></button></td> </tr>
+            </table>
+        </form>
+        <footer id = "rodape">
+            <span id = "logoRodape">
+                <img src = "../icones/logotipo.png" width = 110>
+            </span>
+            <table id = "links" align = center>
+                <tr class = "titulo"> <td><a href = "../diversos/pagina-inicial.html">Página Inicial</a></td> <td><a href = "../financeiro/financeiro-insumos.html">Financeiro</a></td> <td><a href = "tanques.html">Tanques</a></td> <td><a href = "../especie/especies.html">Espécies</a></td> <td><a href = "../estoque/estoque.html">Estoque</a></td> <td><a href = "../relatorios/rel-financeiros.html">Relatórios</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-insumos.html">Insumos</a></td> <td><a href = "../tanques/cadastrar-tanque.html">Cadastrar Tanque</a></td> <td><a href = "../especie/cadastro-especie.html">Cadastrar Espécies</a></td> <td></td> <td><a href = "../relatorios/rel-financeiros.html">Financeiros</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-contas-coletivas.html">Contas coletivas da fazenda</a></td> <td></td> <td></td> <td></td> <td><a href = "../relatorios/rel-tanques.html">Tanques</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-mao-de-obra.html">Mão de obra</a></td> <td></td> <td></td> <td></td> <td><a href = "../relatorios/rel-especies.html">Espécies</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-maquinas-equipamentos.html">Máquinas e equipamentos</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-impostos.html">Impostos, taxas e aluguéis</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-vendas.html">Vendas</a></td> </tr>
+            </table>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name = "Content-Type" content = "text/html"; charset = "UTF-8" />
+        <title>Espécies</title>
+        <link rel = "icon" href = "../icones/icon-peixe.png" type = "image/png-icon">
+        <link href = "../auxiliares/menu-rodape.css" rel = "StyleSheet" />
+        <script type="text/javascript" src = "../auxiliares/menu.js"></script>
+        <script type="text/javascript" src = "especies.js"></script>
+        <link href = "especies.css" rel = "StyleSheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+<body>
+    <body>
+      <nav id = "menu">
+          <ul>
+              <img src = "../icones/logotipo.png" id = "logoCabecalho"/>
+              <li>
+                  <a href = "../diversos/pagina-inicial.html"><img src = "../icones/home.png" width = 25/></a>
+              </li>
+              <li>
+                  <a href = "../tanques/tanques.html">Tanques</a>
+              </li>
+              <li class = "current">
+                  <a href = "../especie/especies.html">Espécies</a>
+              </li>
+              <li>
+                  <a href = "../estoque/estoque.html">Estoque</a>
+              </li>
+              <li>
+                  <a href = "../relatorios/rel-financeiros.html">Relatórios</a>
+              </li>
+          </ul>
+          <span id = "conta">
+              <img title = "<%=nome%>" src = "../funcionarios/nabson-paiva.jpg" id = "user"/>
+              <img id="seta" src = "../icones/seta-para-baixo.png"/><br/>
+              <label id = "admin">Nabson</label>
+              <ul id = "opcoes">
+                  <li id="atual" onclick="abrirContaFunc()">Minha conta</li><br/>
+                  <li onclick="abrirContaEmp()">Empresa</li><br/>
+                  <li onclick="sair()">Sair</li>
+              </ul>
+          </span>
+      </nav>
+    <div class="container" style="padding-top: 40px">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src = "../especies/piranha.png" height="200px">
+            <div class="card-body">
+              <h5>Piranha</h5>
+              <p class="card-text">A piranha-vermelha (Pygocentrus nattereri) é uma espécie de peixe de água doce da família Characidae. Tais peixes habitam as bacias dos rios Amazonas.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver mais</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src = "../especies/tambaqui.png" height="200px">
+              <div class="card-body">
+                <h5>Tambaqui</h5>
+                <p class="card-text">Tambaqui, também chamado de Pacu Vermelho, é um peixe de água doce e de escamas com corpo romboidal, nadadeira adiposa curta com raios na extremidade.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver mais</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src = "../especies/pirarucu.png" height="200px">
+              <div class="card-body">
+                <h5>Pirarucu</h5>
+                <p class="card-text">O pirarucu estava ameaçado de extinção na região do médio Solimões, no Amazonas, agora está totalmente fora de perigo devido à pesca sustentável.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver mais</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src = "../especies/tucunare.jpg" height="200px">
+            <div class="card-body">
+              <h5>Tucunaré</h5>
+              <p class="card-text">Tucunaré, do Tupi "tucun" e "aré" amigo, ou seja, "semelhante ao tucum", Cichla spp., é uma espécie de peixe presente nos rios da América do Sul.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver mais</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name = "Content-Type" content = "text/html"; charset = "UTF-8" />
+        <link rel="icon" href="../icones/icon-peixe.png" type="image/png-icon" />
+        <title>Tanques</title>
+        <link href = "tanques.css" rel = "StyleSheet" />
+        <link href = "../css/tanques.css" rel = "StyleSheet" />
+        <link href = "../css/menu-rodape.css" rel = "StyleSheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body>
+      <nav id = "menu">
+          <ul>
+              <img src = "../icones/logotipo.png" id = "logoCabecalho"/>
+              <li>
+                  <a href = "../diversos/pagina-inicial.html"><img src = "../icones/home.png" width = 25/></a>
+              </li>
+              <li class = "current">
+                  <a href = "tanques.html">Tanques</a>
+              </li>
+              <li>
+                  <a href = "../especie/especies.html">Espécies</a>
+              </li>
+              <li>
+                  <a href = "../estoque/estoque.html">Estoque</a>
+              </li>
+              <li>
+                  <a href = "../relatorios/rel-financeiros.html">Relatórios</a>
+              </li>
+          </ul>
+          <span id = "conta">
+              <img title = "<%=nome%>" src = "../funcionarios/nabson-paiva.jpg" id = "user"/>
+              <img id="seta" src = "../icones/seta-para-baixo.png"/><br/>
+              <label id = "admin">Nabson</label>
+              <ul id = "opcoes">
+                  <li id="atual" onclick="abrirContaFunc()">Minha conta</li><br/>
+                  <li onclick="abrirContaEmp()">Empresa</li><br/>
+                  <li onclick="sair()">Sair</li>
+              </ul>
+          </span>
+      </nav>
+
+        <div style="padding-top:25px;" class="container">
+          <div class="card-deck mb-3 text-center" >
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header" >
+                <h4 class="my-0 font-weight-normal">Tanque 1</h4>
+              </div>
+              <div class="card-body">
+                <p>
+                  Espécie:  <br>
+                  Quantidade: <br>
+                  Biomassa: <br>
+                  Material: <br>
+                </p>
+                <button type="button" class="btn btn-lg btn-block btn-primary">Detalhes</button>
+              </div>
+            </div>
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Tanque 2</h4>
+                </div>
+                <div class="card-body">
+                  <p>
+                    Espécie:  <br>
+                    Quantidade: <br>
+                    Biomassa: <br>
+                    Material: <br>
+                  </p>
+                  <button type="button" class="btn btn-lg btn-block btn-primary">Detalhes</button>
+                </div>
+              </div>
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Tanque 3</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Espécie:  <br>
+                      Quantidade: <br>
+                      Biomassa: <br>
+                      Material: <br>
+                    </p>
+                    <button type="button" class="btn btn-lg btn-block btn-primary">Detalhes</button>
+                  </div>
+                </div>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Tanque 4</h4>
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        Espécie:  <br>
+                        Quantidade: <br>
+                        Biomassa: <br>
+                        Material: <br>
+                      </p>
+                      <button type="button" class="btn btn-lg btn-block btn-primary">Detalhes</button>
+                    </div>
+                  </div>
+          </div>
+          <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Tanque 5</h4>
+              </div>
+              <div class="card-body">
+                <p>
+                  Espécie:  <br>
+                  Quantidade: <br>
+                  Biomassa: <br>
+                  Material: <br>
+                </p>
+                <button type="button" class="btn btn-lg btn-block btn-primary">Detalhes</button>
+              </div>
+            </div>
+              <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Tanque 6</h4>
+                </div>
+                <div class="card-body">
+                  <p>
+                    Espécie:  <br>
+                    Quantidade: <br>
+                    Biomassa: <br>
+                    Material: <br>
+                  </p>
+                  <button type="button" class="btn btn-lg btn-block btn-primary">Detalhes</button>
+                </div>
+              </div>
+                <div class="card mb-4 shadow-sm">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Tanque 7</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>
+                      Espécie:  <br>
+                      Quantidade: <br>
+                      Biomassa: <br>
+                      Material: <br>
+                    </p>
+                    <button type="button" class="btn btn-lg btn-block btn-primary">Detalhes</button>
+                  </div>
+                </div>
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal">Tanque 8</h4>
+                    </div>
+                    <div class="card-body">
+                      <p>
+                        Espécie:  <br>
+                        Quantidade: <br>
+                        Biomassa: <br>
+                        Material: <br>
+                      </p>
+                      <button type="button" class="btn btn-lg btn-block btn-primary">Detalhes</button>
+                    </div>
+                  </div>
+          </div>
+
+        </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

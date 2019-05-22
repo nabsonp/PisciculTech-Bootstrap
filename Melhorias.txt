@@ -1,0 +1,11 @@
+Próximas Versões:
+Calendário de atividades;
+Acesso de empregados;
+Inserir dreno e tela anti-fuga;
+Verificar como vai ficar o cálculo das metas;
+Ver como vão ficar as condições de perigo;
+Simulação de pesquisa;
+Ícones do menu lateral;
+Aproximar mais do topo as tabelas;
+Colocar a imagem nos botões como background;
+Clicar em botão do menu lateral e ele ficar current;

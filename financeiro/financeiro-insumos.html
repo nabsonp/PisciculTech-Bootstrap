@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name = "Content-Type" content = "text/html"; charset = "UTF-8" />
+        <title>Insumos</title>
+        <link href = "../auxiliares/menu-rodape.css" rel = "StyleSheet" />
+        <link rel = "icon" href = "../icones/icon-peixe.png" type = "image/png-icon">
+        <link href = "../auxiliares/menu-lateral.css" rel = "StyleSheet" />
+        <link href = "financeiro-insumos.css" rel = "StyleSheet" />
+        <link href = "../auxiliares/navegacao.css" rel = "StyleSheet" />
+        <script type="text/javascript" src = "abrir.js"></script>
+   <script type="text/javascript" src = "../auxiliares/menu.js"></script>
+    </head>
+    <body>
+        <nav id = "menu">
+            <ul>
+                <img src = "../Icones/logotipo.png" id = "logoCabecalho"/>
+                <li>
+                    <a href = "../diversos/pagina-inicial.html"><img src = "../Icones/home.png" width = 25/></a>
+                </li>
+                <li class = "current">
+                    <a href = "financeiro-insumos.html">Financeiro</a>
+                </li>
+                <li>
+                    <a href = "../tanques/tanques.html">Tanques</a>
+                </li>
+                <li>
+                    <a href = "../especie/especies.html">Espécies</a>
+                </li>
+                <li>
+                    <a href = "../estoque/estoque.html">Estoque</a>
+                </li>
+                <li>
+                    <a href = "../relatorios/financeiros/rel-financeiros.html">Relatórios</a>
+                </li>
+                <li>
+                    <span>
+                        <button><input type = "text" id = "pesquisar" placeholder = "Pesquisar"/><img src = "../icones/lupa-branca.png" onclick = "pesquisar()"/></button>
+                    </span>
+                </li>
+            </ul>
+                <span id = "conta">
+                    <a href = "#"><img src = "../Icones/usuario.png" id = "user"/></a>
+                    <div><label id = "admin"><a href = "#">Admin</a></label></div>
+                </span>  
+                <button id = "sair" onclick = "sair()">Sair</button> 
+        </nav>
+        <div id = "navega">
+            <span class = "navegacao"><a href = "../diversos/pagina-inicial.html">Página Inicial</a> » <a href = "financeiro-insumos.html">Finaneiro</a> » <span id = "atual">Insumos</span>
+        </div>
+        <input type = "checkbox" id = "check"><label for = "check" id = "lab"><img src="../icones/cifrao.png" id = "icone"/></label>
+        <div class = "menuLateral">    
+               <ul id = "botoes">
+                    <li>
+                        <button id = "current" onclick = "abrirInsumos()">Insumos</button>
+                    </li>
+                    <li> 
+                        <button  onclick = "abrirContas()">Contas coletivas da fazenda</button>
+                    </li>
+                    <li>
+                        <button onclick = "abrirPeixes()">Peixes</button>
+                    </li>
+                    <li>
+                        <button onclick = "abrirMao()">Mão de obra</button>
+                    </li>
+                    <li>
+                        <button onclick = "abrirMaquinas()">Máquinas e equipamentos</button>
+                    </li>
+                    <li>
+                        <button onclick = "abrirImpostos()">Impostos, taxas e aluguéis</button>
+                    </li>
+                    <li>
+                        <button onclick = "abrirVendas()">Vendas</button>
+                    </li>
+                </ul>
+        </div>
+        <div id = "corpo">
+        <div>
+            <span class = "mesAnoDespesas">Mês: 
+            <select class = "comboMeses">
+                <option>Janeiro</option>
+                <option>Fevereiro</option>  
+                <option>Março</option>  
+                <option>Abril</option>  
+                <option>Maio</option>  
+                <option>Junho</option>  
+                <option>Julho</option>  
+                <option>Agosto</option>  
+                <option>Setembro</option>  
+                <option>Outrubro</option>  
+                <option>Novembro</option>  
+                <option>Dezembro</option>  
+            </select>
+        </span>
+        <span class = "mesAnoDespesas">Ano: 
+            <select class = "comboMeses">
+                <option>2020</option>
+                <option>2019</option>
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>  
+                <option>2015</option>  
+                <option>2014</option>  
+                <option>2013</option>  
+            </select>
+        </span>
+        <span class = "mesAnoDespesas2">Despesas totais: 
+            <input type="text" disabled name="despesas"  placeholder = "R$" >
+        </span>
+        </div>
+
+        <div class = "tituloETabela">
+        <div class = "tituloBotao">
+        <h2 class = "racoes">Rações e Alimentos diversos</h2><button title = "Adicionar" class = "adicionar1"></button>
+        <hr>  
+        </div>
+        <table class = "racao">
+            <thead>
+                    <tr>
+                        <th> Nº </th> 
+                        <th> Nome </th>
+                        <th> Quantidade </th>
+                        <th> Valor(UNI) </th>
+                        <th> Peso(UNI) </th>
+                        <th> Fornecedor </th>
+                        <th> Data da compra(Dia) </th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td> 1 </td> 
+                        <td> Ração TetraMin Tropical Flakes </td>
+                        <td> 1 </td>
+                        <td> 106,00 </td>
+                        <td> 200g </td>
+                        <td> Terra Zoo </td>
+                        <td> 2 </td>
+                        <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button></td> 
+                    </tr>
+                    <tr>
+                        <td> 2 </td> 
+                        <td> Ração para Karpas </td>
+                        <td> 2 </td>
+                        <td> 66,00 </td>
+                        <td> 10kg </td>
+                        <td> Mercado líder </td>
+                        <td> 5 </td>
+                        <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button></td> 
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td> - </td>
+                        <td>TOTAL</td>
+                        <td> - </td>
+                        <td> 238,00 </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                    </tr>
+                </tfoot>
+        </table>
+        </div>
+        <div class = "tituloETabela">
+        <div class = "tituloBotao">
+        <h2 class = "produtos">Produtos químicos</h2><button class = "adicionar2" title = "Adicionar"></button>
+        <hr>
+        </div>
+
+        <table class = "produtos">
+            <thead>
+                    <tr>
+                        <th> Nº </th> 
+                        <th> Nome do produto </th>
+                        <th> Quantidade </th>
+                        <th> Valor(UNI) </th>
+                        <th> Peso(UNI) </th>
+                        <th> Fornecedor </th>
+                        <th> Data da compra(Dia) </th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td> 1 </td> 
+                        <td> Permanganato de potássio</td>
+                        <td> 2 </td>
+                        <td> 26,00 </td>
+                        <td> 200g </td>
+                        <td> Poupafarma </td>
+                        <td> 4 </td>
+                        <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button></td> 
+                    </tr>
+                    <tr>
+                        <td> 2 </td> 
+                        <td> Sulfato de cobre </td>
+                        <td> 1 </td>
+                        <td> 34,00 </td>
+                        <td> 1kg </td>
+                        <td> SOS piscina </td>
+                        <td> 6 </td>
+                        <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button></td> 
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td> - </td>
+                        <td>TOTAL</td>
+                        <td> - </td>
+                        <td> 85,00 </td>
+                        <td> - </td>
+                        <td> - </td>
+                        <td> - </td>
+                    </tr>
+                </tfoot>
+        </table>
+        </div>
+
+        <div class = "tituloETabela">
+        <div class = "tituloBotao">
+        <h2 class = "outros">Outras despesas</h2><button class = "adicionar3" title = "Adicionar"></button>
+        <hr>  
+        </div>
+
+        <table class = "outros">
+            <thead>
+                    <tr>
+                        <th> Nº </th> 
+                        <th> Descrição </th>
+                        <th> Valor </th>
+                        <th> Data da compra(Dia) </th>
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>1</td> 
+                        <td>Curso de pisciultura</td>
+                        <td>300,00</td>
+                        <td>15</td>
+                        <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button></td> 
+                    </tr>
+                    <tr>
+                        <td>2</td> 
+                        <td>Livro - Fundamentos e ténicas de manejo</td>
+                        <td>57,00</td>
+                        <td>17</td>
+                        <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button></td> 
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td> - </td>
+                        <td>TOTAL</td>
+                        <td> 357,00 </td>
+                        <td> - </td>
+                        
+                        
+                    </tr>
+                </tfoot>
+        </table>
+        </div>
+        </div>
+        <footer id = "rodape">
+            <span id = "logoRodape">
+                <img src = "../Icones/logotipo.png" width = 110>
+            </span>
+            <table id = "links" align = center>
+                <tr class = "titulo"><td><a href = "../diversos/pagina-inicial.html">Página Inicial</a></td> <td><a href = "financeiro-insumos.html">Financeiro</a></td> <td><a href = "../tanques/tanques.html">Tanques</a></td> <td><a href = "../especie/especies.html">Espécies</a></td> <td><a href = "../estoque/estoque.html">Estoque</a></td> <td><a href = "../relatorios/rel-financeiros.html">Relatórios</a></td> </tr>
+                <tr> <td></td> <td><a href = "financeiro-insumos.html">Insumos</a></td> <td><a href = "../tanques/cadastrar-tanque.html">Cadastrar Tanque</a></td> <td><a href = "../especie/cadastro-especie.html">Cadastrar Espécies</a></td> <td></td> <td><a href = "../relatorios/rel-financeiros.html">Financeiros</a></td> </tr>
+                <tr> <td></td> <td><a href = "financeiro-contas-coletivas.html">Contas coletivas da fazenda</a></td> <td></td> <td></td> <td></td> <td><a href = "../relatorios/rel-tanques.html">Tanques</a></td> </tr>
+                <tr> <td></td> <td><a href = "financeiro-mao-de-obra.html">Mão de obra</a></td> <td></td> <td></td> <td></td> <td><a href = "../relatorios/rel-especies.html">Espécies</a></td> </tr>
+                <tr> <td></td> <td><a href = "financeiro-maquinas-equipamentos.html">Máquinas e equipamentos</a></td> </tr>
+                <tr> <td></td> <td><a href = "financeiro-impostos.html">Impostos, taxas e aluguéis</a></td> </tr>
+                <tr> <td></td> <td><a href = "financeiro-vendas.html">Vendas</a></td> </tr>
+            </table>
+        </footer>
+    </body>
+</html>

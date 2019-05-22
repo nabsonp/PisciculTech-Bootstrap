@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name = "Content-Type" content = "text/html"; charset = "UTF-8" />
+        <title>Cadastrar Espécie</title>
+        <link rel = "icon" href = "../icones/icon-peixe.png" type = "image/png-icon">
+        <link href = "../auxiliares/menu-rodape.css" rel = "StyleSheet" />
+        <link rel = "icon" href = "../icones/icon-peixe.png" type = "image/png-icon">
+        <link href = "../auxiliares/botoes-formulario.css" rel = "StyleSheet" />
+        <link href = "cadastro-especie.css" rel = "StyleSheet" />
+        <link rel= "stylesheet" type="text/css" href="../auxiliares/navegacao.css">
+        <script type= "text/javascript" src = "../auxiliares/menu.js"></script>
+        <script type= "text/javascript" src = "cadastro-especie.js"></script>
+    </head>
+    <body onload="foco()">
+        <nav id = "menu">
+            <img src = "../icones/logotipo.png" id = "logoCabecalho"/>
+            <ul>
+                <li>
+                    <a href = "../diversos/pagina-inicial.html"><img src = "../icones/home.png" width = 25/></a>
+                </li>
+                <li>
+                    <a href = "../financeiro/financeiro-insumos.html">Financeiro</a>
+                </li>
+                <li>
+                    <a href = "../tanques/tanques.html">Tanques</a>
+                </li>
+                <li class = "current">
+                    <a href = "#">Espécies</a>
+                </li>
+                <li>
+                    <a href = "../estoque/estoque.html">Estoque</a>
+                </li>
+                <li>
+                    <a href = "../relatorios/rel-financeiros.html">Relatórios</a>
+                </li>
+                <li>
+                    <span>
+                        <button><input type = "text" id = "pesquisar" placeholder = "Pesquisar"/><img src = "../icones/lupa-branca.png" onclick = "pesquisar()"/></button>
+                    </span>
+                </li>
+            </ul>
+                <span id = "conta">
+                    <a href = "#"><img src = "../icones/usuario.png" id = "user"/></a>
+                    <div><label id = "admin"><a href = "#">Admin</a></label></div>
+                </span>
+                <button id = "sair" onclick = "sair()">Sair</button> 
+        </nav>
+
+        <div id = "navega">
+        	<span class = "navegacao"><a href = "../diversos/pagina-inicial.html">Página Inicial</a> » <a href = "#">Espécie</a> » <span id = "atual">Cadastrar espécie </span></span>
+        </div>
+
+        <div id = "cadastro">
+			<h1>Cadastro</h1>
+        	<hr> 
+        	<div id = "informacoes-peixe">
+        	<form name = "informacoes">
+        	<table>
+        		<tr>
+        			<td>
+        				<label>Nome popular: </label>
+        			</td>
+        			<td colspan="3">
+        				<input type="text" name="nomePopular" size = "38" placeholder = "Tambaqui">
+        			</td>
+        			
+        		</tr>
+        		<tr>
+        			<td>
+        				<label>Nome científico: </label>
+        			</td>
+        			<td colspan="3">
+        				<input type="text" name="nomeCientifico"  size = "38" placeholder = "Colossoma macropomum">
+        			</td>
+        			
+        		</tr>
+        		<tr>
+        			<td>
+        				<label>Faixa de peso (kg): </label>
+        			</td>
+        			<td>
+        				<input type="text" name="faixaDePeso" size = "5" id = "faixaDePeso" onkeyup = "verificaNumeros('faixaDePeso')">
+        			</td>
+        			<td>Biomassa:</td>
+        			<td><input type="text" name="biomassa" size = "5"  onkeyup = "verificaNumeros('biomassa')" id = "biomassa"></td>
+        		</tr>
+        		<tr>
+        			<td>
+        				<label>Ração (kg):</label>
+        			</td>
+        			<td>
+        				<input type="text" name="racaoPorDia" size = "5"  onkeyup = "verificaNumeros('racaoPorDia')" id = "racaoPorDia">
+        			</td>
+        			<td>Frequência alimentar:</td>
+        			<td><input type="text" name="frequenciaAlimentar" size = "5"  onkeyup = "verificaNumeros('frequenciaAlimentar')" id = "frequenciaAlimentar"></td>
+        		</tr>
+        		<tr>
+        			<td>
+        				<label>Tamanho médio:</label>
+        			</td>
+        			<td>
+        				<input type="text" name="tamanhoMedio" size = "5"  onkeyup = "verificaNumeros('tamanhoMedio')" id = "tamanhoMedio">
+        			</td>
+        			<td>Largura média:</td>
+        			<td><input type="text" name="larguraMedia" size = "5"  onkeyup = "verificaNumeros('larguraMedia')" id = "larguraMedia"></td>
+        		</tr>
+
+        	</table>
+        	</form>
+        	</div>
+
+        	<button type = "button" id = "img-peixe" ></button>
+   			
+
+        	<div id = "condicoes-ideais">
+        	<form name = "condicoes">
+        	<table>
+        		<tr>
+        			<th colspan = "4"><h2>Condições ideais</h2></th>
+        		</tr>
+        		<tr>
+        			<td>
+        				<label>Temperatura (°C) :</label>
+        			</td>
+        			<td>
+        				<input type="text" name="temperatura" size = "5"  onkeyup = "verificaNumeros('temperatura')" id = "temperatura">
+        			</td>
+        			<td>
+        				<label>Luminosidade:</label>
+        			</td>
+        			<td >
+        				<input type="text" name="luminosidade" size = "10"  onkeyup = "verificaNumeros('luminosidade')" id = "luminosidade">
+        			</td>
+        		</tr>
+            		<tr>
+            			<td>
+            				<label>Oxigênio(O²):</label>
+            			</td>
+            			<td>
+            				<input type="text" name="" size = "5"  onkeyup = "verificaNumeros('oxigenio')" id = "oxigenio">
+            			</td>
+            			<td>
+            				<label>pH:</label>
+            			</td>
+            			<td>
+            				<input type="text" name="ph" size = "10"  onkeyup = "verificaNumeros('ph')" id = "ph">
+            			</td>
+            		</tr>
+        		<tr>
+        			<td>
+        				<label>Gás carbônico(CO²):</label>
+        			</td>
+        			<td>
+        				<input type="text" name="gasCarbonico" size = "5"  onkeyup = "verificaNumeros('gasCarbonico')" id = "gasCarbonico">
+        		</tr>
+        		<tr> <td colspan="4" align = "right"><button class = "botoes" onclick="salvar()"><img src = "../Icones/checked.png" /><span>Salvar</span></button><button class = "botoes" onclick="cancelar()"><img src = "../Icones/cancelar.png"/><span>Cancelar</span></button></td> </tr>
+            </table>
+            </form>
+        </div>
+        </div>
+
+        <footer id = "rodape">
+            <span id = "logoRodape">
+                <img src = "../icones/logotipo.png" width = 110>
+            </span>
+            <table id = "links" align = center>
+                <tr class = "titulo"> 
+                <td><a href = "../diversos/pagina-inicial.html">Página Inicial</a></td> <td><a href = "../financeiro/financeiro-insumos.html">Financeiro</a></td> <td><a href = "../tanques/tanques.html">Tanques</a></td> <td><a href = "especies.html">Espécies</a></td> <td><a href = "../estoque/estoque.html">Estoque</a></td> <td><a href = "../relatorios/rel-financeiros.html">Relatórios</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-insumos.html">Insumos</a></td> <td><a href = "../tanques/cadastrar-tanque.html">Cadastrar Tanque</a></td> <td><a href = "cadastro-especie.html">Cadastrar Espécies</a></td> <td></td> <td><a href = "../relatorios/rel-financeiros.html">Financeiros</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-contas-coletivas.html">Contas coletivas da fazenda</a></td> <td></td> <td></td> <td></td> <td><a href = "../relatorios/rel-tanques.html">Tanques</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-mao-de-obra.html">Mão de obra</a></td> <td></td> <td></td> <td></td> <td><a href = "especies.html">Espécies</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-maquinas-equipamentos.html">Máquinas e equipamentos</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-impostos.html">Impostos, taxas e aluguéis</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-vendas.html">Vendas</a></td> </tr>
+            </table>
+        </footer>
+    </body>
+</html>

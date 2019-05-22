@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Andada');
+
+div#navega{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    margin-bottom: 5px;
+}
+
+div#navega a{
+    text-decoration: none;
+    color: #000;
+}
+
+span#atual{
+    color: #00a4d3 !important;
+}
+
+div#navega a:hover{
+    color: #00a4d3;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*RELATÓRIOS FINANCEIROS*/
+div.menuLateral {
+    background-color: #f0eded;
+    width: 225px;
+    height: 390px !important;
+    border-radius: 5px;
+    position: relative;
+    top: -46px;
+    left: -255px;
+    transition: all 0.5s;
+}
+
+ul#botoes button, div.menuLateral input{
+    float: left;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    font-family: 'Andada', serif;
+    text-align: center;
+    color: black;
+    width: 205px;
+    margin-top: 5px;
+    box-shadow: 2px 2px grey;
+    position: relative;
+    right: 31px;
+    transition: 0.1s;
+}
+
+ul#botoes button:hover, div.menuLateral input:hover{
+    background-color: #1a7c96 !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+div#ImgLateral{
+    background-image: url("../../icones/imagem-placeholder.png");
+    height: 155px;
+    width: 90%;
+    background-size: 100% 100%;
+    border-radius: 15px;
+    border: none;
+    position: relative;
+    top: 225px;
+    left: 12px;
+}
+
+div#ImgLateral:hover{
+    background: url('../../icones/imagem-placeholder-edit.png');
+    background-size: 100% 100%;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px grey;
+}
+
+nav#submenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    position: relative;
+    left: 50%;
+    margin-left: -155px;
+    border-radius: 5px;
+}
+
+nav#submenu button{
+    font-family: 'Andada', serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border-style: inherit;
+    background-color: #fff;
+    transition: all 0.2s;
+}
+
+nav#submenu button:hover{
+    cursor: pointer;
+    background-color: #4dd7fa;
+    color: #fff;
+}
+
+nav#submenu button#sub-current{
+    background-color: #4dd7fa !important;
+    color: #fff;
+}
+
+form#mesAno{
+    position: relative;
+    top: 15px;
+    left: 5%;
+    width: 90%;
+}
+
+form#mesAno select{
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 50px;
+}
+
+div#corpo{
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: -440px;
+    transition: all 0.5s;
+}
+
+#check:checked ~ div#corpo{
+    transform: translateX(9.5%);
+}
+
+h2{
+    font-family: 'Andada', serif;
+    color: #606060; 
+    font-weight: inherit;
+    position: relative;
+    left: 50%;
+}
+
+h2#vendas{
+    margin-left: -40px;
+    width: 80px;
+}
+
+h2#taxas{
+    margin-left: -31px;
+    width: 62px;
+}
+
+span.titulo{
+    display: block;
+}
+
+span.titulo button{
+    visibility: hidden;
+    float: right;
+    margin-right: 5px;
+    border-style: inherit;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -57.5px;
+}
+
+div#corpo div:hover span.titulo button{
+    visibility: visible;
+}
+
+span.titulo button img{
+    width: 30px;
+    margin-left: 5px;
+    position: relative;
+    top: 3px;
+    left: -5.5px;
+}
+
+span.titulo button:hover{
+    cursor: pointer;
+}
+
+hr{
+    width: 100%;
+    position: relative;
+    top: -55px;
+}
+
+table.dados{
+    border-width: 1px;
+    border-spacing: 0px;
+    position: relative;
+    top: -55px;
+    left: 50%;
+    margin-left: -450px;
+    width: 900px;
+}
+
+table.dados td{
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+}
+
+table.dados tr.titulo{
+    background-color: #91e4fb;
+    text-align: center !important;
+}
+
+table.dados tr.titulo td{
+    text-align: center !important;
+}
+
+div#corpo div div{
+    position: relative;
+    top: -45px;
+    left: 50%;
+    margin-left: -450px;
+    width: 900px;
+    height: 250px;
+    background-color: #f7f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#corpo div div h1{
+    font-family: 'Andada', serif;
+    color: #003748;
+}
+
+body{
+    height: 1330px;
+}
+
+footer#rodape{
+    top:160% !important;
+}

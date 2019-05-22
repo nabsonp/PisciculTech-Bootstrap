@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta name = "Content-Type" content = "text/html"; charset = "UTF-8" />
+        <link rel="icon" href="../icones/icon-peixe.png" type="image/png-icon" />
+        <title>Tanque</title>
+        <link href = "dados-tanque.css" rel = "StyleSheet" />
+        <link href = "../auxiliares/menu-rodape.css" rel = "StyleSheet" />
+        <link href = "../auxiliares/menu-lateral.css" rel = "StyleSheet" />
+        <script src="../auxiliares/menu.js"></script>
+        <script src="dados-tanque.html"></script>
+    </head>
+    <body>
+        <nav id = "menu">
+            <ul>
+                <img src = "../icones/logotipo.png" id = "logoCabecalho"/>
+                <li>
+                    <a href = "../diversos/pagina-inicial.html"><img src = "../icones/home.png" width = 25/></a>
+                </li>
+                <li>
+                    <a href = "../financeiro/financeiro-insumos.html">Financeiro</a>
+                </li>
+                <li class = "current">
+                    <a href = "tanques.html">Tanques</a>
+                </li>
+                <li>
+                    <a href = "../especie/especies.html">Espécies</a>
+                </li>
+                <li>
+                    <a href = "../estoque/estoque.html">Estoque</a>
+                </li>
+                <li>
+                    <a href = "../relatorios/rel-financeiros.html">Relatórios</a>
+                </li>
+                <li>
+                    <span>
+                        <button><input type = "text" id = "pesquisar" placeholder = "Pesquisar"/><img src = "../icones/lupa-branca.png" onclick = "pesquisar()"/></button>
+                    </span>
+                </li>
+            </ul>
+            <span id = "conta">
+                    <a href = "../diversos/cadastro-editar"><img src = "../icones/usuario.png" id = "user"/></a>
+                    <div><label id = "admin"><a href = "#">Admin</a></label></div>
+                </span>
+            <button id = "sair" onclick = "sair()">Sair</button>
+        </nav>
+        <div id = "navega"><a href = "../diversos/pagina-inicial.html">Página Inicial</a> &raquo; <a href = "tanques.html">Tanques</a> &raquo; <span id = "atual">ID do Tanque 1</span></div>
+        <input type = "checkbox" id = "check"><label for = "check" id = "lab"><img src="../icones/calendario.png" id = "icone"/></label>
+        <div class = "menuLateral">
+                <ul id = "botoes">
+                    <li>
+                        <button id = "current">Hoje</button>
+                    </li>
+                    <li> 
+                        <button>Ontem</button>
+                    </li>
+                    <li>
+                        <button>06 de maio de 2017</button>
+                    </li>
+                    <li>
+                        <button>05 de maio de 2017</button>
+                    </li>
+                    <li>
+                        <button>04 de maio de 2017</button>
+                    </li>
+                    <li>
+                        <button>03 de maio de 2017</button>
+                    </li>
+                    <li>
+                        <button>02 de maio de 2017</button>
+                    </li>
+                    <li>
+                        <button>01 de maio de 2017</button>
+                    </li>
+                    <li>
+                        <button>30 de abril de 2017</button>
+                    </li>
+                    <li>
+                        <button>30 de abril de 2017</button>
+                    </li>
+                    <li>
+                        <button>29 de abril de 2017</button>
+                    </li>
+                    <li>
+                        <button>28 de abril de 2017</button>
+                    </li>
+                    <li>
+                        <input type = "date">
+                    </li>
+                </ul>
+        </div>
+        <div class = "menuLateralT">
+            <img src="../icones/tanque.png" id = "iconeT"/>
+                <ul id = "botoes">
+                    <li>
+                        <button id = "current">ID do Tanque 1</button>
+                    </li>
+                    <li> 
+                        <button>ID do Tanque 2</button>
+                    </li>
+                    <li>
+                        <button>ID do Tanque 3</button>
+                    </li>
+                    <li>
+                        <button>ID do Tanque 4</button>
+                    </li>
+                    <li>
+                        <button>ID do Tanque 5</button>
+                    </li>
+                    <li>
+                        <button>ID do Tanque 6</button>
+                    </li>
+                    <li>
+                        <button>Ver mais tanques...</button>
+                    </li>
+                </ul>
+        </div>
+        <div id = "corpo">
+            <h1>ID do Tanque 1</h1>
+            <h2 id = "agua">Água</h2><hr>
+            <table class = "dados" id = "agua">
+                <tr class = "titulo"> <td>Propriedade</td> <td>Valor</td> <td>Padrão</td> <td>Última Avaliação</td> <td>Verificações</td> <td>Padrão de Verificações</td> <td>Sensor</td> <td>Situação</td> </tr>
+                <tr> <td>Temperatura</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Oxigênio</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Amônia</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Nitrito</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Nitrato</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Gás Carbônico</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Alcalinidade</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>pH</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "adicionar"/></button></td> </tr>
+                <tr> <td>Espuma</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Luminosidade</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+            </table>
+            <h2 id = "peixes">Peixes</h2><hr>
+            <table class = "dados" id = "peixe">
+                <tr class = "titulo"> <td>Nº</td> <td>Espécie</td> <td>Quantidade</td> <td>Peso Médio (kg)</td> <td>Faixa de Peso Normal (kg)</td> <td>Biomassa (kg)</td> <td>Ração/dia</td> <td>Tamanho</td> <td>Situação</td> </tr>
+                <tr> <td>1</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>2</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>3</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>4</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>5</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>6</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+            </table>
+            <h2 id = "arracoamento">Arraçoamento</h2><hr>
+            <table class = "dados" id = "arracoamento">
+                <tr class = "titulo"> <td>Vezes de arraçoamento</td> <td>Ração</td> <td>Marca</td> <td>Horário</td> <td>Quantidade (kg)</td> </tr>
+                <tr> <td>1</td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>2</td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>3</td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>4</td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>5</td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>6</td> <td></td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+            </table>
+            <h2 id = "dadosTanque">Dados do Tanque</h2><hr>
+            <table class = "dados" id = "dadosDoTanque">
+                <tr class = "titulo"> <td>Dado</td> <td colspan="3">Valor</td> </tr>
+                <tr> <td>Piscicultura</td> <td colspan="3"></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Tipo</td> <td colspan="3"></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Material de Revestimento</td> <td colspan="3"></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Capacidade (L)</td> <td colspan="3"></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Vazão (L)</td> <td colspan="3"></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Renivação de Água (L)</td> <td colspan="3"></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Peixamento</td> <td colspan="3"></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+                <tr> <td>Dimensões (CxLxP)</td> <td></td> <td></td> <td></td> <td class = "btts"><button><img  src = "../icones/lixeira.png" title = "Excluir"/></button><button><img  src = "../icones/editar.png" title = "Editar"/></button><button><img  src = "../icones/adicionar.png" title = "Adicionar"/></button></td> </tr>
+            </table>
+            <div id = "topo"><a href = "#menu">Voltar ao Topo<img src = "../icones/seta-para-cima-preta.png"/></a></div>
+        </div>
+        <footer id = "rodape">
+            <span id = "logoRodape">
+                <img src = "../icones/logotipo.png" width = 110>
+            </span>
+            <table id = "links" align = center>
+                <tr class = "titulo"> <td><a href = "../diversos/pagina-inicial.html">Página Inicial</a></td> <td><a href = "../financeiro/financeiro-insumos.html">Financeiro</a></td> <td><a href = "tanques.html">Tanques</a></td> <td><a href = "../especie/especies.html">Espécies</a></td> <td><a href = "../estoque/estoque.html">Estoque</a></td> <td><a href = "../relatorios/rel-financeiros.html">Relatórios</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-insumos.html">Insumos</a></td> <td><a href = "../tanques/cadastrar-tanque.html">Cadastrar Tanque</a></td> <td><a href = "../especie/cadastro-especie.html">Cadastrar Espécies</a></td> <td></td> <td><a href = "../relatorios/rel-financeiros.html">Financeiros</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-contas-coletivas.html">Contas coletivas da fazenda</a></td> <td></td> <td></td> <td></td> <td><a href = "../relatorios/rel-tanques.html">Tanques</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-mao-de-obra.html">Mão de obra</a></td> <td></td> <td></td> <td></td> <td><a href = "../relatorios/rel-especies.html">Espécies</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-maquinas-equipamentos.html">Máquinas e equipamentos</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-impostos.html">Impostos, taxas e aluguéis</a></td> </tr>
+                <tr> <td></td> <td><a href = "../financeiro/financeiro-vendas.html">Vendas</a></td> </tr>
+            </table>
+        </footer>
+    </body>
+</html>
