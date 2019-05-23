@@ -51,7 +51,7 @@ nav#menu li a:before {
     content: "";
     background-color: #fff;
 }
-        
+
 nav#menu li a:hover:before, nav#menu li.current a:before {
   width: 150%;
 }
