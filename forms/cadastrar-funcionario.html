@@ -23,24 +23,24 @@
     </head>
     <body onload="foco()">
         <div class= "container" >
-          <form novalidate class="rounded-lg" style="background-color: #fff; margin-top: 50px;padding: 20px" class="form-signin" name = "cadastroFunc" action = "../diversos/pagina-inicial.html" method="get">
+          <form class="rounded-lg" style="background-color: #fff; margin-top: 50px;padding: 20px" class="form-signin" name = "cadastroFunc" action = "../diversos/pagina-inicial.html" method="get">
             <img class="centro" class="mb-4" src="../icones/logotipo.png" height="72">
             <h1 style="text-align: center; font-family: 'Andada', serif;padding: 10px;">Cadastro de Funcionário</h1>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="validationDefault01">RG</label>
-                <input type="text" class="form-control" id="validationDefault01" placeholder="First name" required="">
+                <input autofocus type="text" class="form-control" id="validationDefault01" placeholder="XXXXXXXX-X" required="">
                 <!--<input maxlength="10" type="text" placeholder = "XXXXXXXX-X" class="form-control" required="" autofocus="">-->
               </div>
               <div class="form-group col-md-6">
                 <label for="inputEmail4">CPF</label>
-                <input maxlength = 14 placeholder = "XXX.XXX.XXX-XX" type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <input maxlength = 14 placeholder = "XXX.XXX.XXX-XX" type="text" class="form-control" id="inputEmail4" placeholder="Email" required>
               </div>
             </div>
             <div class="form-group">
               <div class="form-group">
                 <label for="inputPassword4">Nome</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" required>
                 <small id="passwordHelpBlock" class="form-text text-muted">
                   Insira seu nome completo sem abriviações.
                 </small>
@@ -64,55 +64,55 @@
               </div>
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Nascimento</label>
-                <input maxlength = 14 placeholder = "XXX.XXX.XXX-XX" type="date" class="form-control" id="inputEmail4" placeholder="Email">
+                <input required maxlength = 14 placeholder = "XXX.XXX.XXX-XX" type="date" class="form-control" id="inputEmail4" placeholder="Email">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Cidade</label>
-                <input maxlength = 14 type="text" class="form-control" id="inputEmail4">
+                <input required maxlength = 14 type="text" class="form-control" id="inputEmail4">
               </div>
               <div class="form-group col-md-4">
                 <label for="inputEmail4">Estado</label>
-                <input maxlength = 14 type="text" class="form-control" id="inputEmail4">
+                <input required maxlength = 14 type="text" class="form-control" id="inputEmail4">
               </div>
               <div class="form-group col-md-2">
                 <label for="inputEmail4">CEP</label>
-                <input maxlength = 14  type="text" class="form-control" id="inputEmail4">
+                <input required maxlength = 14  type="text" class="form-control" id="inputEmail4" placeholder="XXXXX-XXX">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Logradouro</label>
-                <input maxlength = 14 type="text" class="form-control" id="inputEmail4">
+                <input required maxlength = 14 type="text" class="form-control" id="inputEmail4">
               </div>
               <div class="form-group col-md-4">
                 <label for="inputEmail4">Bairro</label>
-                <input maxlength = 14 type="text" class="form-control" id="inputEmail4">
+                <input required maxlength = 14 type="text" class="form-control" id="inputEmail4">
               </div>
               <div class="form-group col-md-2">
                 <label for="inputEmail4">Número</label>
-                <input maxlength = 14  type="text" class="form-control" id="inputEmail4">
+                <input required maxlength = 14  type="text" class="form-control" id="inputEmail4">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label for="inputEmail4">Email</label>
-                <input id="inputEmail" maxlength = 14 type="email" class="form-control" id="inputEmail4" required="">
+                <input required id="inputEmail" maxlength = 14 type="email" class="form-control" id="inputEmail4" required="">
                 <small id="inputEmail" class="form-text text-muted">
                   Será usado para acessar sua conta.
                 </small>
               </div>
               <div class="form-group col-md-4">
                 <label for="inputPassword">Senha</label>
-                <input maxlength = 14 type="password" class="form-control" id="inputEmail4">
+                <input required maxlength = 14 type="password" class="form-control" id="inputEmail4">
                 <small id="passwordHelpBlock" class="form-text text-muted">
                   Deve conter letras e números.
                 </small>
               </div>
               <div class="form-group col-md-4">
                 <label for="inputPassword">Confirme sua senha</label>
-                <input maxlength = 14  type="password" class="form-control" id="inputEmail4">
+                <input required maxlength = 14  type="password" class="form-control" id="inputEmail4">
               </div>
             </div>
             <div class = "text-center" class="form-group row">
