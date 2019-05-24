@@ -22,7 +22,6 @@ html, body, #container {
     margin: 0;
     padding: 0;
 }
-
 #container {
   width: 80%;
   height: 80%;
@@ -63,178 +62,297 @@ html, body, #container {
               <a style="color: black; " class="dropdown-item" href="#" onclick="sair()">Sair</a>
           </div>
       </nav>
-      <div id="container"></div>
-        <script>
-          anychart.onDocumentReady(function () {
-            // create line chart
-            var chart = anychart.line();
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                  Dashboard <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                  Outros
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  Produtos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  Clientes
+                </a>
+              </li>
+            </ul>
 
-            // set chart padding
-            chart.padding([10, 20, 5, 20]);
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Saved reports</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  Mês atual
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  Semana passada
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  Engajamento social
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                  Venda por ano
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-            // turn on chart animation
-            chart.animation(true);
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4"><div style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
 
-            // turn on the crosshair
-            chart.crosshair(true);
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Dashboard</h1>
 
-            // set chart title text settings
-            chart.title('Vendas durante a semana');
-
-            // set y axis title
-            chart.yAxis().title('Vendas (kG)');
-
-            // create logarithmic scale
-            var logScale = anychart.scales.log();
-            logScale.minimum(1)
-                    .maximum(45000);
-
-            // set scale for the chart, this scale will be used in all scale dependent entries such axes, grids, etc
-            chart.yScale(logScale);
-
-            // create data set on our data,also we can pud data directly to series
-            var dataSet = anychart.data.set([
-                ['Segunda', '1120', '4732', '15176'],
-                ['Terça', '720', '3689', '18910'],
-                ['Quarta', '404', '3904', '19004'],
-                ['Quinta', '190', '754', '22233'],
-                ['Sexta', '15', '187 ', '922'],
-                ['Sábado', '10', '45', '534'],
-                ['Domingo', '7', '61', '343']
-            ]);
-
-            // map data for the first series,take value from first column of data set
-            var seriesData_1 = dataSet.mapAs({'x': 0, 'value': 1});
-
-            // map data for the second series,take value from second column of data set
-            var seriesData_2 = dataSet.mapAs({'x': 0, 'value': 2});
-
-            // map data for the third series, take x from the zero column and value from the third column of data set
-            var seriesData_3 = dataSet.mapAs({'x': 0, 'value': 3});
-
-            // temp variable to store series instance
-            var series;
-
-            // setup first series
-            series = chart.line(seriesData_1);
-            series.name('Pirarucu');
-            // enable series data labels
-            series.labels()
-                    .enabled(true)
-                    .anchor('left-bottom')
-                    .padding(5);
-            // enable series markers
-            series.markers(true);
-
-            // setup second series
-            series = chart.line(seriesData_2);
-            series.name('Tucunaré');
-            // enable series data labels
-            series.labels()
-                    .enabled(true)
-                    .anchor('left-bottom')
-                    .padding(5);
-            // enable series markers
-            series.markers(true);
-
-            // setup third series
-            series = chart.line(seriesData_3);
-            series.name('Tambaqui');
-            // enable series data labels
-            series.labels()
-                    .enabled(true)
-                    .anchor('left-bottom')
-                    .padding(5);
-            // enable series markers
-            series.markers(true);
-
-            // turn the legend on
-            chart.legend()
-                    .enabled(true)
-                    .fontSize(13)
-                    .padding([0, 0, 20, 0]);
-
-            // set container for the chart and define padding
-            chart.container('container');
-            // initiate chart drawing
-            chart.draw();
-          });
-        </script>
-
-        <script>
-        anychart.onDocumentReady(function () {
-            // create area chart
-            var chart = anychart.area();
-
-            // turn on chart animation
-            chart.animation(true);
-
-            // set chart title text settings
-            chart.title()
-                    .enabled(true)
-                    .useHtml(true)
-                    .text('Métricas de Website');
-
-            // axis title
-            chart.yAxis().title('Número de Visitantes');
-
-            // create a logarithmic scale
-            var logScale = anychart.scales.log();
-            logScale.minimum(1) // set scale minimum value
-                    .maximumGap(0.2); // increase scale maximum gap
-            logScale.ticks().count(6); // set fixed major ticks count
-            logScale.minorTicks().mode('logarithmic'); // set minor ticks to use logarithmic mode
-
-            // set scale for the chart
-            // it force to use passed scale in all scale dependent entries such axes, grids, crosshairs etc
-            chart.yScale(logScale);
-
-            // create area series on passed data
-            var series = chart.area([
-                ['Jan', 112],
-                ['Fev', 163],
-                ['Mar', 229],
-                ['Abr', 990],
-                ['Mai', 4104],
-                ['Jun', 3250],
-                ['Jul', 5720],
-                ['Ago', 43],
-                ['Set', 61],
-                ['Out', 34],
-                ['Nov', 45],
-                ['Dez', 122]
-            ]);
-
-            // set series data labels settings
-            series.labels()
-                    .enabled(true)
-                    .fontColor('#212121')
-                    .position('center-top')
-                    .anchor('center-bottom');
-
-            // turn on series markers
-            series.markers(true);
-
-            // set series name
-            series.name('Número de Visitantes');
-
-            // set up tooltips and interactivity settings
-            series.tooltip()
-                    .position('center-top')
-                    .positionMode('point')
-                    .anchor('left-top')
-                    .offsetX(5)
-                    .offsetY(5);
-
-            chart.interactivity().hoverMode('by-x');
-
-            // set container for the chart
-            chart.container('container');
-            // initiate chart drawing
-            chart.draw();
-        });
-        </script>
-
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button type="button" class="btn btn-sm btn-outline-secondary">Compartilhar</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Exportar</button>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                Essa semana
+              </button>
+            </div>
+          </div>
+          <div id="container">
+            <script>
+              anychart.onDocumentReady(function () {
+                // create line chart
+                var chart = anychart.line();
+                // set chart padding
+                chart.padding([10, 20, 5, 20]);
+                // turn on chart animation
+                chart.animation(true);
+                // turn on the crosshair
+                chart.crosshair(true);
+                // set chart title text settings
+                chart.title('Vendas durante a semana');
+                // set y axis title
+                chart.yAxis().title('Vendas (kG)');
+                // create logarithmic scale
+                var logScale = anychart.scales.log();
+                logScale.minimum(1)
+                        .maximum(45000);
+                // set scale for the chart, this scale will be used in all scale dependent entries such axes, grids, etc
+                chart.yScale(logScale);
+                // create data set on our data,also we can pud data directly to series
+                var dataSet = anychart.data.set([
+                    ['Segunda', '1120', '4732', '15176'],
+                    ['Terça', '720', '3689', '18910'],
+                    ['Quarta', '404', '3904', '19004'],
+                    ['Quinta', '190', '754', '22233'],
+                    ['Sexta', '15', '187 ', '922'],
+                    ['Sábado', '10', '45', '534'],
+                    ['Domingo', '7', '61', '343']
+                ]);
+                // map data for the first series,take value from first column of data set
+                var seriesData_1 = dataSet.mapAs({'x': 0, 'value': 1});
+                // map data for the second series,take value from second column of data set
+                var seriesData_2 = dataSet.mapAs({'x': 0, 'value': 2});
+                // map data for the third series, take x from the zero column and value from the third column of data set
+                var seriesData_3 = dataSet.mapAs({'x': 0, 'value': 3});
+                // temp variable to store series instance
+                var series;
+                // setup first series
+                series = chart.line(seriesData_1);
+                series.name('Pirarucu');
+                // enable series data labels
+                series.labels()
+                        .enabled(true)
+                        .anchor('left-bottom')
+                        .padding(5);
+                // enable series markers
+                series.markers(true);
+                // setup second series
+                series = chart.line(seriesData_2);
+                series.name('Tucunaré');
+                // enable series data labels
+                series.labels()
+                        .enabled(true)
+                        .anchor('left-bottom')
+                        .padding(5);
+                // enable series markers
+                series.markers(true);
+                // setup third series
+                series = chart.line(seriesData_3);
+                series.name('Tambaqui');
+                // enable series data labels
+                series.labels()
+                        .enabled(true)
+                        .anchor('left-bottom')
+                        .padding(5);
+                // enable series markers
+                series.markers(true);
+                // turn the legend on
+                chart.legend()
+                        .enabled(true)
+                        .fontSize(13)
+                        .padding([0, 0, 20, 0]);
+                // set container for the chart and define padding
+                chart.container('container');
+                // initiate chart drawing
+                chart.draw();
+              });
+            </script>
+          </div>
+          <h2>Vendas durante a semana</h2>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                </tr>
+                <tr>
+                  <td>1,002</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>libero</td>
+                  <td>Sed</td>
+                  <td>cursus</td>
+                  <td>ante</td>
+                </tr>
+                <tr>
+                  <td>1,004</td>
+                  <td>dapibus</td>
+                  <td>diam</td>
+                  <td>Sed</td>
+                  <td>nisi</td>
+                </tr>
+                <tr>
+                  <td>1,005</td>
+                  <td>Nulla</td>
+                  <td>quis</td>
+                  <td>sem</td>
+                  <td>at</td>
+                </tr>
+                <tr>
+                  <td>1,006</td>
+                  <td>nibh</td>
+                  <td>elementum</td>
+                  <td>imperdiet</td>
+                  <td>Duis</td>
+                </tr>
+                <tr>
+                  <td>1,007</td>
+                  <td>sagittis</td>
+                  <td>ipsum</td>
+                  <td>Praesent</td>
+                  <td>mauris</td>
+                </tr>
+                <tr>
+                  <td>1,008</td>
+                  <td>Fusce</td>
+                  <td>nec</td>
+                  <td>tellus</td>
+                  <td>sed</td>
+                </tr>
+                <tr>
+                  <td>1,009</td>
+                  <td>augue</td>
+                  <td>semper</td>
+                  <td>porta</td>
+                  <td>Mauris</td>
+                </tr>
+                <tr>
+                  <td>1,010</td>
+                  <td>massa</td>
+                  <td>Vestibulum</td>
+                  <td>lacinia</td>
+                  <td>arcu</td>
+                </tr>
+                <tr>
+                  <td>1,011</td>
+                  <td>eget</td>
+                  <td>nulla</td>
+                  <td>Class</td>
+                  <td>aptent</td>
+                </tr>
+                <tr>
+                  <td>1,012</td>
+                  <td>taciti</td>
+                  <td>sociosqu</td>
+                  <td>ad</td>
+                  <td>litora</td>
+                </tr>
+                <tr>
+                  <td>1,013</td>
+                  <td>torquent</td>
+                  <td>per</td>
+                  <td>conubia</td>
+                  <td>nostra</td>
+                </tr>
+                <tr>
+                  <td>1,014</td>
+                  <td>per</td>
+                  <td>inceptos</td>
+                  <td>himenaeos</td>
+                  <td>Curabitur</td>
+                </tr>
+                <tr>
+                  <td>1,015</td>
+                  <td>sodales</td>
+                  <td>ligula</td>
+                  <td>in</td>
+                  <td>libero</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
